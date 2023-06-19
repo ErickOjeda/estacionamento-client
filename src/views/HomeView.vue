@@ -1,24 +1,46 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
-</template>
+  <div class="row justify-content-md-center p-4">
 
-<style>
-  body{
-    background-color: rgb(44, 39, 39);
-  }
-</style>
+    <div class="col-md-auto">
+      <router-link to="/nova-entrada">
+        <ButtonNew desc="Realizar nova entrada" />
+      </router-link>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <h2 class="text-white">Saidas</h2>
+  </div>
+
+  <Table :columns="colunasDaTabela" :items="dadosDaTabela"></Table>
+</template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Table from '@/components/Table.vue';
+import ButtonNew from '@/components/ButtonNew.vue';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
-    HelloWorld,
+    Table,
+    ButtonNew
   },
+  data() {
+    return {
+      colunasDaTabela: [
+        { label: 'Entrada', field: 'entrada' },
+        { label: 'Placa', field: 'placa' },
+        { label: 'Veiculo', field: 'veiculo' },
+        { label: 'Condutor', field: 'condutor' }
+      ],
+      dadosDaTabela: [
+        { id: 1, placa: 'ASCD-982', veiculo: 'Honda Civic', condutor: 'Erick', entrada: '10:53:11' },
+        { id: 2, placa: 'DSAA-784', veiculo: 'Jeep Compass', condutor: 'Andre', entrada: '11:27:41' },
+        { id: 3, placa: 'DALE-147', veiculo: 'Corolla', condutor: 'Emilio', entrada: '13:10:07' },
+      ]
+    }
+  }
 });
 </script>
