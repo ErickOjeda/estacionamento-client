@@ -1,8 +1,6 @@
 <template>
   <div class="row justify-content-md-center py-4 text-white">
-    <div class="w-50">
-      <h3>Bem vindo! Confira abaixo os carros estacionados e a opção para realizar uma nova entrada.</h3>
-    </div>
+      <h3>Bem vindo ao ParkSpace!</h3>
   </div>
 
   <div class="row pb-4">
@@ -22,15 +20,32 @@
       <div class="modal-content">
         <form>
           <div class="modal-header">
-            <h1 class="modal-title fs-5 text-white" id="novaEntradaLabel">Nova marca</h1>
+            <h1 class="modal-title fs-5 text-white" id="novaEntradaLabel">Nova entrada</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
 
-            <div class="col-md-12">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" name="nome" id="nome" class="form-control">
+            <div class="col-md-12 pb-2">
+              <label for="placa" class="form-label">Placa</label>
+              <input type="text" name="placa" id="placa" class="form-control">
+            </div>
 
+            <div class="col-md-12 pb-2">
+              <label for="modelo" class="form-label">Modelo</label>
+              <input type="text" id="modelo" class="form-control" disabled>
+            </div>
+            <div class="col-md-12 pb-2">
+              <label for="marca" class="form-label">Marca</label>
+              <input type="text" id="marca" class="form-control" disabled>
+            </div>
+            <div class="col-md-12 pb-2">
+              <label for="marca" class="form-label">Ano</label>
+              <input type="text" id="marca" class="form-control" disabled>
+            </div>
+
+            <div class="col-md-12 pb-2">
+              <label for="condutor" class="form-label">Condutor</label>
+              <input type="text" id="condutor" class="form-control">
             </div>
 
 

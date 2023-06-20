@@ -3,7 +3,7 @@
     
     <div class="container-fluid">
 
-      <router-link to="/" class="navbar-brand"><i class="bi bi-car-front-fill"></i> ParkScape</router-link>
+      <router-link to="/" class="navbar-brand fw-semibold"><i class="bi bi-car-front-fill fw-semibold"></i> ParkScape</router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav fw-semibold">
           <li class="nav-item">
             <router-link to="/" :class="{ active: $route.path === '/' }" class="nav-link">Inicio</router-link>
           </li>
