@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-md-center p-4">
+  <div class="row justify-content-md-center py-4">
 
     <div class="col-md-auto">
       <router-link to="/nova-entrada">
@@ -9,8 +9,8 @@
 
   </div>
 
-  <div class="row">
-    <h2 class="text-white">Saidas</h2>
+  <div class="row pb-4">
+    <h2 class="text-white">No estacionamento</h2>
   </div>
 
   <Table :columns="colunasDaTabela" :items="dadosDaTabela"></Table>

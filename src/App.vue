@@ -61,6 +61,9 @@
   label {
     color: #fff;
   }
+  .w-10 {
+    width: 10%;
+  }
 </style>
 
 <!-- <script lang="ts">
