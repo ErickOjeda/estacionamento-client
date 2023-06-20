@@ -2,13 +2,39 @@
     <div class="row py-4">
 
         <div class="col-md-6">
-            <h2 class="text-white">Marcas</h2>
+            <h3 class="text-white">Marcas</h3>
         </div>
 
         <div class="col-md-6 text-end">
-            <router-link to="/marcas/new">
-                <ButtonNew desc="Cadastrar"></ButtonNew>
-            </router-link>
+            <ButtonNew type="button" class="btn" data-bs-toggle="modal" data-bs-target="#novaMarca" desc="Cadastrar">
+            </ButtonNew>
+        </div>
+
+        <div class="modal fade" id="novaMarca" tabindex="-1" aria-labelledby="novaMarcaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white" id="novaMarcaLabel">Nova marca</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="col-md-12">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" name="nome" id="nome" class="form-control">
+                           
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-warning fw-semibold">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -33,14 +59,14 @@ export default defineComponent({
         return {
             colunasDaTabela: [
                 { label: 'Id', field: 'id' },
-                { label: 'Ativo', field: 'ativo' },
+                { label: 'Estado', field: 'estado' },
                 { label: 'Nome', field: 'nome' }
 
             ],
             dadosDaTabela: [
-                { id: 1, ativo: 'Ativo', nome: 'Toyotta'},
-                { id: 2, ativo: 'Ativo', nome: 'Honda'},
-                { id: 3, ativo: 'Ativo', nome: 'Jeep'}
+                { id: 1, estado: 'Ativo', nome: 'Toyotta' },
+                { id: 2, estado: 'Ativo', nome: 'Honda' },
+                { id: 3, estado: 'Ativo', nome: 'Jeep' }
             ]
         }
     }

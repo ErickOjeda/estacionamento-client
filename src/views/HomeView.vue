@@ -1,16 +1,47 @@
 <template>
-  <div class="row justify-content-md-center py-4">
-
-    <div class="col-md-auto">
-      <router-link to="/nova-entrada">
-        <ButtonNew desc="Realizar nova entrada" />
-      </router-link>
+  <div class="row justify-content-md-center py-4 text-white">
+    <div class="w-50">
+      <h3>Bem vindo! Confira abaixo os carros estacionados e a opção para realizar uma nova entrada.</h3>
     </div>
-
   </div>
 
   <div class="row pb-4">
-    <h2 class="text-white">No estacionamento</h2>
+    <div class="col-md-6">
+      <h3 class="text-white">No estacionamento</h3>
+
+    </div>
+    <div class="col-md-6 text-end">
+      <ButtonNew type="button" class="btn" data-bs-toggle="modal" data-bs-target="#novaEntrada"
+        desc="Realizar nova entrada">
+      </ButtonNew>
+    </div>
+  </div>
+
+  <div class="modal fade" id="novaEntrada" tabindex="-1" aria-labelledby="novaEntradaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-white" id="novaEntradaLabel">Nova marca</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="col-md-12">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" name="nome" id="nome" class="form-control">
+
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-warning fw-semibold">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 
   <Table :columns="colunasDaTabela" :items="dadosDaTabela"></Table>
