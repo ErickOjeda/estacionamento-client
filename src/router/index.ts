@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import NovaEntradaView from '../views/NovaEntradaView.vue'
 import MarcasView from '../views/MarcasView.vue'
 import ModelosView from '../views/ModelosView.vue'
+import CondutoresView from '../views/CondutoresView.vue'
+import VeiculosView from '../views/VeiculosView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,6 +26,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/modelos',
     name: 'modelos',
     component: ModelosView
+  },
+  {
+    path: '/condutores',
+    name: 'condutores',
+    component: CondutoresView
+  },
+  {
+    path: '/veiculos',
+    name: 'veiculos',
+    component: VeiculosView
   }
 ]
 
