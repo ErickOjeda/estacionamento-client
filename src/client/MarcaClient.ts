@@ -8,7 +8,7 @@ export class MarcaClient {
     constructor() {
         this.axiosClient = axios.create({
             baseURL: 'http://localhost:8080/api/marca',
-            headers: { 'Content-type': 'application/json' }
+            headers: { 'Content-type': 'application/json', 'Access-Control-Allow-Origin': 'http://localhost:8080' }
         });
     }
 
@@ -22,7 +22,7 @@ export class MarcaClient {
 
     public async listAll(): Promise<Marca[]> {
         try {
-            return (await this.axiosClient.get<Marca[]>(`/listar`)).data
+            return (await this.axiosClient.get<Marca[]>(`/lista`)).data
         } catch (error: any) {
             return Promise.reject(error.response)
         }
@@ -30,7 +30,7 @@ export class MarcaClient {
 
     public async cadastrar(marca: Marca): Promise<void> {
         try {
-            return (await this.axiosClient.post('/', marca)).data
+            return (await this.axiosClient.post('', marca)).data
         } catch (error: any) {
             return Promise.reject(error.response)
         }
